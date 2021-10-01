@@ -1,0 +1,90 @@
+\documentclass[]{article}
+
+%opening
+\title{Physics of Motion: Weekly Problems 1}
+\author{Casey Farren-Colloty}
+\date{}
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{braket}
+\usepackage[margin=1.0in]{geometry}
+\usepackage{bbold}
+\usepackage{physics}
+\begin{document}
+
+\maketitle
+
+\section{Problem 1}
+A particle travels along the line $y=2x+1$
+with uniform speed $\va{V}$. Find the components of its velocity parallel to the axes of x and y.
+\vspace{5mm}
+
+\textbf{Solution}\\
+The x and y components of a vector $\va{V}$ are denoted as $\va{V_{x}}$ and $\va{V_{y}}$ respectively.
+\\
+It follows from Pythagoras' Theorem that the x and y components of the vector $\va{V}$ could be written in the forms
+\begin{equation}
+	\va{V_{x}}=\va{V}\cos\theta
+\end{equation}
+\begin{equation}
+	\va{V_{y}}=\va{V}\sin\theta
+\end{equation}
+Let $\theta$ = The angle between the line $y$ and the x axis.\\
+Using $tan\theta = m$ where m = the slope of the line $y=2x+1$ in the form $y=mx+c$. We find that:\\
+	\[
+	\tan\theta = 2
+	\]
+		\[
+	\arctan(2) = \theta
+		\]
+	\begin{equation}
+	\theta \approx\ 63.435^\circ
+\end{equation}\\
+From inserting the value of $\theta$ from Eq.3 into the values for $\va{V_{x}}$ and $\va{V_{y}}$ from Eq.1 and Eq.2 respectively:
+\[
+\va{V_{x}}=\va{V}\cos63.435^\circ
+, \va{V_{y}}=\va{V}\sin63.435^\circ
+\]
+\section{Problem 2}
+The velocities of the two particles at time \textit{t} are $2t\va{i}+12\va{j}$ and $4\va{i}+(3-2t)\va{j}$, respectively. Find the instant when the particles are moving in perpendicular directions.
+\vspace{5mm}
+
+\textbf{Solution}\\
+Let $\va{A}=2t\va{i}+12\va{j}$ and $\va{B}=4\va{i}+(3-2t)\va{j}$. We can rewrite these vectors in the form:\\ 
+\begin{equation}
+	\va{A}=\begin{pmatrix}
+	2t & 12 & 0
+\end{pmatrix}
+\end{equation}
+\begin{equation}
+\va{B}=\begin{pmatrix}
+4 & 3-2t & 0
+\end{pmatrix}
+\end{equation}
+To find the time in which the vectors are moving in perpendicular directions, we must find the time $t$ such that the dot product 
+\begin{equation}\va{A}\cdot\va{B}=0
+\end{equation}
+\begin{align*}
+\begin{pmatrix}
+	2t & 12 & 0
+\end{pmatrix}
+\cdot
+\begin{pmatrix}
+	4 & 3-2t & 0
+\end{pmatrix} &= 2t\cdot4+12\cdot(3-2t)\\
+&=8t+36-24t\\
+&=36-16t
+\end{align*}
+\begin{equation}
+	\va{A}\cdot\va{B}=36-16t
+\end{equation}
+\[Eq. 6 = Eq. 7\]
+\[
+0=36-16t\]\[
+16t=36\]\[
+t=\frac{36}{12}
+\]
+\begin{equation}
+	t=\frac{9}{4}
+\end{equation}
+From Equation 8 we can see that the two particles are moving in perpendicular directions when $t=\frac{9}{4}$units of time.
+\end{document}
