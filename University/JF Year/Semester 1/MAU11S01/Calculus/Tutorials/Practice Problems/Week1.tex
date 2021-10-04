@@ -1,0 +1,139 @@
+\documentclass[]{article}
+
+%opening
+\title{MAU11S01 - Calculus Practice Questions (Week 1)}
+\author{Casey Farren-Colloty}
+\date{}
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{braket}
+\usepackage[margin=1.0in]{geometry}
+\usepackage{bbold}
+\usepackage{physics}
+
+\begin{document}
+
+\maketitle
+
+\section{Problem 1}
+(a) Find $f(-1.1), f(0), f(\sqrt{3}), f(2t)$ for the function
+\[
+f(x) = \left\{
+\begin{array}{ll}
+	\frac{1}{x} & \quad x \leq -1 \\
+	2x^2 & \quad x > -1
+\end{array}
+\right.
+\]
+(b) Check that $x = 1$ is a root of the polynomial $Q(x) = x^3-6x^2+9x-4.$ Divide $Q(x)$ by $x-1$. Use this to factorise $Q(x)$, and to determine all $x$ for which $Q(x) \geq 0$
+
+\vspace{5mm}
+
+\textbf{Solution}\\
+(a)\[
+f(-1.1) = \frac{1}{-1.1} = -\frac{10}{11} = 0.\overline{90}
+\]\[
+f(0) = 2(0)^2 = 0
+\]\[
+f(\sqrt{3}) = 2(\sqrt{3})^2 = 2(3) = 6
+\]If 2t $\leq$ -1\[
+f(2t) = \frac{1}{2t}
+\]Else\[
+f(2t) = 2(2t)^2 = 2(4t^2) = 8t^2
+\]
+(b)
+\[
+Q(1) = 1^3-6(1)^2+9(1)-4 = 0 \therefore x = 1 \text{is a root of } Q(x)
+\]\[
+\frac{Q(x)}{x-1} = \frac{x^3-6x^2+9x-4}{x-1}\]\[
+\begin{array}{r}
+	= x^2-5x+4\phantom{)}   \\
+	x-1{\overline{\smash{\big)}\,x^3-6x^2+9x-4\phantom{)}}}\\
+	\underline{-~\phantom{(}(x^3-x^2)\phantom{-b)}}\\
+	-5x^2+9x\phantom{)}\\ 
+	\underline{-~\phantom{()}(-5x^2+5x)}\\ 
+	4x-4\phantom{)}\\
+	\underline{-~\phantom{()}(4x-4)}\\ 
+	0\phantom{)}
+	
+\end{array}
+\implies \frac{Q(x)}{x-1} = x^2-5x+4 \text{ When $x \ne 1$}
+\]  
+
+
+The roots of this new polynomial can be found by setting the it to equal 0 and then using the quadratic formula
+
+\[ x = \frac{-b\pm\sqrt{b^2-4ac}}{2a}\]\[ \text{Where the polynomial is in the form } ax^2+bx+c
+\]
+\[\text{This allows us to plug in the required values from our polynomial and find its roots}\]
+\[ x = \frac{-(-5)\pm\sqrt{(-5)^2-4(1)(4)}}{2(1)} 
+= \frac{5\pm\sqrt{25-16}}{2} 
+\]\[
+= \frac{5\pm\sqrt{9}}{2} = \frac{5\pm3}{2} = 4 \text{ or } 1
+\]\[
+\implies \text{The roots of the polynomial can be written as } (x-4)(x-1)
+\]\[
+\therefore Q(x) \text{ can be written as } (x-1)(x-1)(x-4) = (x-1)^2(x-4)
+\]\[
+(x-1)^2(x-4) \geq 0
+\]\[
+(x-4)\geq0
+\]\[
+x\geq4
+\]Or \[
+(x-1)^2\geq0
+\]\[
+(x-1)\geq0
+\]\[
+x\geq1
+\]
+All values of $x$ where $Q(x) \geq 0$ can be found where $\{x\geq1|x\in \mathbb{R}\}\cap\{x\geq4|x\in \mathbb{R}\} = \{x\geq4|x\in \mathbb{R}\}$
+
+
+\section{Problem 2}
+(a) Consider the functions $f(x)=\frac{x^2+2x}{x} \text{ and } g(x)=\sqrt{(x+1)^2}+1$. Show these functions are differnt. Find a ray on which they are equal.\\
+(b) Find the range of the function $f(x) = \frac{2x^2+1}{x^2+1}$
+\vspace{5mm}
+
+\textbf{Solution}\\
+(a) These functions can be shown as different by applying the same $x$ value to both.
+\[
+f(0) = \frac{(0)^2+2(0)}{0} = \frac{0}{0} \text{ which is undefined } g(0) = \sqrt{(0+1)^2}+1 = 2 \therefore f(x) \ne g(x)
+\]
+After simplifying both functions $f(x) = x+2$ where $x\ne0$, and $g(x) = x$\\
+However because they can be simplified into the same expression, $f(x) = g(x) = x+2$ they would appear to occupy the same line.\\
+Except because $f(x)$ has a denominator of $x$ and so can have a 0 denominator whilst $g(x)$ does not, their graphs cannot be the same.\\
+This leads to the two rays for which $f(x) = g(x)$, this is $(+\infty,0),(0,-\infty)$\\
+(b)\[
+f(x) = \frac{2x^2+1}{x^2+1} \text{Which has a real solution for all $x^2+1 \ne 0$}
+\]\[
+\text{To find the value of $x$ for which $f(x)$ has no solution, we set $x^2+1 = 0$}
+\]\[
+x^2+1 = 0\]\[
+x^2 = -1\]\[
+x = \sqrt{-1}\]\[
+x = i\]\[
+\implies f(x) \notin \mathbb{R} \text{ when } x = i
+\]\[
+\therefore \text{The domain of $f(x)$ is } (+\infty,-\infty) \{x\in \mathbb{R}\}
+\]
+Using this fact, we can find the maximum and minimum output of the function without worrying about undefinined outputs.\\
+To find the maximum\[
+\lim\limits_{x\rightarrow \infty} \frac{2x^2+1}{x^2+1} = \frac{\lim\limits_{x\rightarrow \infty} 2x^2+1}{\lim\limits_{x\rightarrow \infty} x^2+1}
+\]\[
+\frac{\lim\limits_{x\rightarrow \infty} 2x^2+1}{\lim\limits_{x\rightarrow \infty} x^2+1} = \frac{\lim\limits_{x\rightarrow \infty} 2 + \frac{1}{x^2}}{\lim\limits_{x\rightarrow \infty} 1 + \frac{1}{x^2}}
+\]\[
+\frac{\lim\limits_{x\rightarrow \infty} 2 + \frac{1}{x^2}}{\lim\limits_{x\rightarrow \infty} 1 + \frac{1}{x^2}} = \frac{2}{1} = 2
+\]
+To find the minimum\[
+f'(x) = \frac{2x}{(x^2+1)^2} = 0
+\]\[
+\implies x = 0 \text{ When $f(x)$ is at a minimum}
+\]\[
+f(0) = \frac{2(0)^2+1}{(0)^2+1} = 1 
+\] \[
+\therefore \text{The range of $f(x)$ is } 1 \leq f(x) \leq 2 \text{ } \forall \text{ }  x \text{ } \{x \in \mathbb{R}\}
+\]
+
+
+
+\end{document}
